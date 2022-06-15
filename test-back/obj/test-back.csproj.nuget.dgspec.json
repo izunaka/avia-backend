@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\test-task\\test-back\\test-back\\test-back.csproj": {}
+    "D:\\WebProjects\\test-back\\test-back\\test-back.csproj": {}
   },
   "projects": {
-    "D:\\test-task\\test-back\\test-back\\test-back.csproj": {
+    "D:\\WebProjects\\test-back\\test-back\\test-back.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\test-task\\test-back\\test-back\\test-back.csproj",
+        "projectUniqueName": "D:\\WebProjects\\test-back\\test-back\\test-back.csproj",
         "projectName": "test-back",
-        "projectPath": "D:\\test-task\\test-back\\test-back\\test-back.csproj",
-        "packagesPath": "C:\\Users\\prosto_egor\\.nuget\\packages\\",
-        "outputPath": "D:\\test-task\\test-back\\test-back\\obj\\",
+        "projectPath": "D:\\WebProjects\\test-back\\test-back\\test-back.csproj",
+        "packagesPath": "C:\\Users\\imsle\\.nuget\\packages\\",
+        "outputPath": "D:\\WebProjects\\test-back\\test-back\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\prosto_egor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\imsle\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,9 +40,23 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.InMemory": {
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             }
           },
           "imports": [
@@ -63,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

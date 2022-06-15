@@ -7,25 +7,20 @@ namespace test_back.Models
 {
     public class Ticket
     {
-        public Ticket(long id, string from, string to, DateTime depDate, DateTime arrDate, double cost)
-        {
-            this.id = id;
-            this.from = from;
-            this.to = to;
-            this.depDate = depDate;
-            this.arrDate = arrDate;
-            this.cost = cost;
-        }
-        public long id { get; set; }
+        public long Id { get; set; }
 
-        public string from { get; set; }
+        public City FromCity { get; set; }
 
-        public string to { get; set; }
+        public City ToCity { get; set; }
 
-        public DateTime depDate { get; set; }
+        public DateTime DepDate { get; set; }
 
-        public DateTime arrDate { get; set; }
+        public DateTime ArrDate { get; set; }
 
-        public double cost { get; set; }
+        public double Cost { get; set; }
+
+        public int Seats { get; set; }
+
+        public bool IsRefundable { get; set; }
     }
 }

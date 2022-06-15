@@ -12,7 +12,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using test_back.Models;
-using test_back.Interfaces;
 
 namespace test_back
 {
@@ -39,9 +38,10 @@ namespace test_back
                                   });
             });
 
-            services.AddDbContext<AppDBContent>(options => options.UseInMemoryDatabase("Tickets"));
+            string connectionString = Configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<AppDBContent>(options => options.UseSqlServer(connectionString));
+
             services.AddControllers();
-            services.AddTransient<ITicketRepository, TicketRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,12 +64,6 @@ namespace test_back
             {
                 endpoints.MapControllers();
             });
-
-            using (var scope = app.ApplicationServices.CreateScope())
-            {
-                AppDBContent content = scope.ServiceProvider.GetRequiredService<AppDBContent>();
-                Objects.Initial(content);
-            }
         }
     }
 }

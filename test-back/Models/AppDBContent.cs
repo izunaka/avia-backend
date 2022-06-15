@@ -10,6 +10,9 @@ namespace test_back.Models
     {
         public AppDBContent(DbContextOptions<AppDBContent> options) : base(options) { }
 
-        public DbSet<Ticket> Tickets { get; set; }
+        public virtual DbSet<Ticket> Tickets { get; set; }
+        public virtual DbSet<City> Cities { get; set; }
+        public virtual DbSet<DocType> DocTypes { get; set; }
+        public virtual DbSet<Passenger> Passengers { get; set; }
     }
 }
